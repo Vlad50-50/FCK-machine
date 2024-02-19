@@ -1,7 +1,6 @@
 const inputElement = document.getElementById("inp");
-const submitButton = document.getElementById("submit"); // Добавляем получение кнопки
+const submitButton = document.getElementById("submit");
 
-// Загрузка данных из localStorage
 let jsonData = JSON.parse(localStorage.getItem('data')) || [];
 
 insertAndClearText();
@@ -12,17 +11,11 @@ function generateUniqueRandomPassword(length) {
 
     while (!isUnique) {
         newPassword = generateRandomPassword(length);
-
-        // Проверяем уникальность пароля
         if (!jsonData.includes(newPassword)) {
             isUnique = true;
         }
     }
-
-    // Добавляем новый пароль в данные
     jsonData.push(newPassword);
-
-    // Сохраняем обновленные данные в localStorage
     localStorage.setItem('data', JSON.stringify(jsonData));
 
     return newPassword;
@@ -43,13 +36,13 @@ function insertAndClearText() {
     inputElement.value = newPassword;
     console.log(newPassword);
     
-    // Нажимаем кнопку submit
     if (submitButton) {
         submitButton.click();
+        console.log("I'm clicked");
     }
 
     setTimeout(() => {
         inputElement.value = "";
-        setTimeout(insertAndClearText, 500);
-    }, 500);
+        setTimeout(insertAndClearText, 50);
+    }, 50);
 }
