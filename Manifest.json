@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Button Click Logger",
-  "version": "1.0",
-  "description": "Logs 'test' to console on button click",
+  "name": "FCK-machine",
+  "version": "0111.1101.1001",
+  "description": "Click on start OK?",
   "permissions": [
     "activeTab"
   ],
