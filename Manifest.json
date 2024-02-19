@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "FCK-machine",
-  "version": "0111.1101.1001",
-  "description": "Click on start OK?",
+  "version": "0.1",
+  "description": "Click on start OK? 0111.1101.1001",
   "permissions": [
     "activeTab"
   ],
